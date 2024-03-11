@@ -1,0 +1,17 @@
+.main-div mat-card{
+    padding: 0px;
+}
+.login{
+    padding: 20px;
+}
+.mat-elevation-z10{
+    background-image: url(src\assets\i1.png);
+   
+    height: 100%;
+
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}

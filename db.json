@@ -1,0 +1,24 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "signupUsers": [
+    
+  ],
+  "reclamations": [
+    
+  ],
+  "admin": [
+    {
+      "email": "admin@gmail.com",
+      "password": "admin123"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

@@ -1,0 +1,15 @@
+table {
+  width: 100%;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+table ng-container{
+  margin: 10px;
+}
+.container{
+  max-width: 1200px ;
+  margin: 0 auto;
+}

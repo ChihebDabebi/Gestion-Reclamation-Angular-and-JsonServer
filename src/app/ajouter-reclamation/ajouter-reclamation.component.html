@@ -1,0 +1,44 @@
+<h1 mat-dialog-title> Ajouter Reclamation</h1>
+<div mat-dialog-content>
+    <form [formGroup]="ajoutForm" fxLayoutAlign="stretch" fxLayout="column">
+        <mat-form-field appearance="fill">
+            <mat-label >Status</mat-label>
+            <mat-select formControlName='status'>
+                <mat-option  *ngFor="let status of status" [value]="status.value"[disabled]="this.LoggedIn"  >
+                    {{status.viewValue}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Degré d'urgence</mat-label>
+            <mat-select formControlName="degree">
+                <mat-option  *ngFor="let degree of degrees" [value]="degree.value">
+                    {{degree.viewValue}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Type de réclamation</mat-label>
+            <mat-select formControlName="type">
+                <mat-option  *ngFor="let type of types" [value]="type.value">
+                    {{type.viewValue}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+
+        <mat-form-field appearance="fill">
+            <mat-label>Détails de la réclamation</mat-label>
+            <textarea formControlName="details" matInput placeholder="Ex. ..."></textarea>
+        </mat-form-field>
+
+        <label for="formFile" class="form-label">Ajouter un fichier</label>
+        <input class="form-control" formControlName="fichier" type="file" id="formFile">
+        <mat-divider></mat-divider><br>
+        <button isIconButton mat-raised-button color="primary" (click)="ajoutReclamation()" [disabled]="ajoutForm.invalid" type="submit">{{actionBtn}}</button>
+
+    </form>
+
+
+
+</div>

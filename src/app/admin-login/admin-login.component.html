@@ -1,0 +1,22 @@
+<div fxLayoutAlign="center center" fxFlexFill  class="mat-elevation-z10">
+    <mat-card fxFlex="25">
+        <mat-toolbar>
+            <span>Admin Login Page </span>
+        </mat-toolbar>
+        <form [formGroup]="adminForm" #f="ngForm" fxLayoutAlign="stretch" fxLayout="column" class="login"
+            (ngSubmit)="login()">
+            <mat-form-field>
+                <input formControlName="email" matInput type="email" placeholder="email" required>
+            </mat-form-field>
+
+            <mat-form-field>
+                <input formControlName="password" matInput type="password" placeholder="Password" required>
+            </mat-form-field>
+            <button mat-raised-button type="submit" [disabled]="adminForm.invalid" color="primary">LogIn </button><br>
+           
+
+        </form>
+
+
+    </mat-card>
+</div>
